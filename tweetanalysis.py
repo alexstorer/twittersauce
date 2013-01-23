@@ -6,7 +6,7 @@ import random
 import sys
 import csv
 
-twitter_stream = twitter.TwitterStream(auth=UserPassAuth('iqssrtc', 'Go4tP*rn'))
+twitter_stream = twitter.TwitterStream(auth=UserPassAuth('iqssrtc', '********'))
 res = twitter_stream.statuses.filter(track='obama')
 
 reslist = []
