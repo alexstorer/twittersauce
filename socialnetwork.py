@@ -125,7 +125,7 @@ def saveFile(d):
     f.close()
             
 t = twitter__login.login()
-screen_name = 'brorfred'
+screen_name = 'iqss_rtc'
 response = t.users.show(screen_name=screen_name)
 user_id = response['id']
 
