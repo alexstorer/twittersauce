@@ -13,8 +13,8 @@ def login():
     # See also http://dev.twitter.com/pages/oauth_single_token
 
     APP_NAME = ''
-    CONSUMER_KEY = 'Vdmmn8FDQOy56xMCxAAgg'
-    CONSUMER_SECRET = '7nqfvRaY0BwpIhit5EHgqJ1VHkj9SLXjN4zX0Pjr8'
+    CONSUMER_KEY = ''
+    CONSUMER_SECRET = ''
     TOKEN_FILE = 'out/twitter.oauth'
 
     try:
