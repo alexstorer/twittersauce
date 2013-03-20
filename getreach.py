@@ -37,7 +37,15 @@ dwb.writeheader()
 for r in res:
     print len(reslist)
     reslist.append(r)
-    dw.writerow({k:v.encode('utf8') if isinstance(v,unicode) else v for k,v in r.items()})
+    # new versions of python
+    #{k:v.encode('utf8') if isinstance(v,unicode) else v for k,v in r.items()}
+    newd = {}
+    for k,v in r.items():
+        if isinstance(v,unicode):
+            newd[k] = v.encode('utf8')
+    
+    #dw.writerow({k:v.encode('utf8') if isinstance(v,unicode) else v for k,v in r.items()})
+    dw.writerow(newd)
     brieftext = r['text']
     if isinstance(brieftext,unicode):
         brieftext = brieftext.encode('utf8')
