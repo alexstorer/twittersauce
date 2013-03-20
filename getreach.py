@@ -24,13 +24,21 @@ tweetfields = set([u'favorited', u'in_reply_to_user_id', u'contributors', u'trun
 fname = '/users/astorer/Work/shoffman/example_tweets.csv'
 f = open(fname,'w')
 dw = csv.DictWriter(f,fieldnames=list(tweetfields))
-dw.writeheader()
+headerd = {}
+for k in list(tweetfields):
+    headerd[k] = k
+dw.writerow(headerd)
+    #dw.writeheader()
 
 # where do we store them?
 fname = '/users/astorer/Work/shoffman/example_tweets_brief.csv'
 fb = open(fname,'w')
 dwb = csv.DictWriter(fb,fieldnames=['userid','tweet','followers','geocode'])
-dwb.writeheader()
+headerd = {}
+for k in ['userid','tweet','followers','geocode']:
+    headerd[k] = k
+#dwb.writeheader()
+dwb.writerow(headerd)    
 
 
 # collect all of the results
